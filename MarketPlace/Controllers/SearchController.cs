@@ -22,11 +22,19 @@ namespace MarketPlace.Controllers
 
         public ActionResult SearchPage(string searching)
         {
+            List<tblProduct> products = db.tblProducts.ToList();
+            List<tblProductDetail> productDetails = db.tblProductDetails.ToList();
+
+            var joinedOp = from p in products
+                           join d in productDetails on p.ProductID equals d.ProductID
+                           where p.ProductName.Contains(searching) || searching == null
+                           select new FullProductClass { tblProductmodel = p, tblProductDetailmodel = d };
+
             var fullProduct = (from p in db.tblProducts
                                join d in db.tblProductDetails
                                on p.ProductID equals d.ProductID
                                where p.ProductName.Contains(searching) || searching == null
-                               select new
+                               select new 
                                {
                                    ProductID = p.ProductID,
                                    ProductName = p.ProductName,
@@ -52,7 +60,7 @@ namespace MarketPlace.Controllers
                                    Operating_Voltage_Max = d.Operating_Voltage_Max,
                                    Fan_Speed_Max = d.Fan_Speed_Max
                                }).ToList();
-            return View(fullProduct);
+            return View(joinedOp);
         }
 
         public ActionResult Search(string searching)
