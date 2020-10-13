@@ -1,0 +1,121 @@
+﻿
+@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - MarketPlace</title>
+    @Styles.Render("~/Content/css")
+
+</head>
+
+
+
+
+<body style="margin:5px; padding:5px" class="login-background">
+
+
+    <div class="">
+
+        <div class="main-header" style="clear:both; height:70px">
+
+
+            <div class="row">
+                <div class="col-sm">
+                    <div style="margin-left:30px; margin-bottom:10px;"><img height="60" src="@Url.Content("~/Images/logo.png")" /></div>
+                </div>
+                <div class="col-sm">
+                    <div class="input-group mb-3" style="margin-top:15px">
+                        <div class="input-group-prepend">
+
+                            <select class="custom-select label-primary" id="slt-category">
+                                <option selected>Category</option>
+                                <option value="1">Mechanical</option>
+                                <option value="2">Electrical</option>
+                                <option value="3">Stationary</option>
+                                <option value="4">Furniture</option>
+                            </select>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Search...">
+                        <button style="margin-left:5px" class="btn btn-primary" type="button"><i class="fa fa-search"></i></button>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div style="float:right; width:100px"><img height="60" class="rounded-circle" src="@Url.Content("~/Images/sample.png")" alt="Profile pic" /></div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+        <div>
+            <div class="row" style="background:#ffffff; height:530px">
+                <div class="col-3" style="border: 0px solid red;">
+
+                    <div class="row" style="background:#F8F8F8; padding:5px">
+                        <div class="col-sm" style="padding-top:7px">
+                            Search:
+                        </div>
+                        <div class="col-sm" style="padding-top:5px">
+                            <button style="padding:3px 10px; background:#5BC0DE; color:#fff" class="btn btn-secondary btn-sm" type="button">Clear</button>
+                        </div>
+                        <div class="col-sm" style="padding-top:5px">
+                            <button style="padding:3px 10px;background:#5BC0DE; color:#fff" class="btn btn-secondary btn-sm" type="button">Save</button>
+                        </div>
+                    </div>
+
+                    <!-- second row-->
+                    <div class="row" style="background:#F8F8F8; padding:5px">
+
+                        <div class="col-sm" style="padding-top:5px;">
+                            <button style="padding:3px 10px; color:#fff" class="btn btn-block btn-secondary btn-sm" type="button">Product</button>
+                        </div>
+                        <div class="col-sm" style="padding-top:5px">
+                            <button style="padding:3px 10px; color:#fff" class="btn btn-block btn-secondary btn-sm" type="button">Projects</button>
+                        </div>
+                    </div>
+
+                    <!-- second row-->
+                    <div class="row" style="background:#F8F8F8; padding:5px">
+
+                        <div class="col-sm" style="padding-top:5px;">
+                            <button style="padding:3px 10px; color:#fff" class="btn btn-block btn-secondary btn-sm" type="button">Product</button>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- second row-->
+
+
+                <div class="col-9">
+                    2 of 3 (wider)
+                </div>
+            </div>
+
+
+
+
+
+            <footer>
+                <p>&copy; @DateTime.Now.Year - MarketPlace</p>
+            </footer>
+        </div>
+
+    </div>
+
+
+
+    @Scripts.Render("~/bundles/bootstrap")
+
+</body>
+
+</html>

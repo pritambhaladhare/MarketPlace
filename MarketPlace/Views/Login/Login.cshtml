@@ -1,0 +1,124 @@
+﻿@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_site.cshtml";
+}
+
+
+<div class="body-content btn-sign-up pull-right" id="holder-sign-up"><span id="btn-signup">Sign Up</span></div>
+<div>
+    <div class="input-group">
+        <input type="text" class="form-control">
+        <div class="input-group-append">
+            <span class="input-group-text"><i class="fa fa-user"></i></span>
+        </div>
+    </div>
+
+    <div class="input-group" style="margin-top:10px">
+        <input type="text" class="form-control">
+        <div class="input-group-append">
+            <span class="input-group-text"><i class="fa fa-lock"></i></span>
+        </div>
+    </div>
+
+
+    <div class="" style="margin-top:10px">
+        <button type="button" class="btn btn-primary pull-right">Login</button>
+    </div>
+
+</div>
+
+
+<!-- Modal -->
+
+<div class="modal fade" id="signUpModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Register as User</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+
+                    <div class="form-group row">
+                        <div class="col-sm-4">
+                            &nbsp;
+                        </div>
+                        <div class="col-sm-8" style="text-align:center">
+
+                            <span style="text-align:center;font-weight:bold">Image Preview</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col-sm-4">
+                            &nbsp;
+                        </div>
+                        <div class="col-sm-8">
+
+                            <div style="margin:auto; width:100px"><img height="100" class="rounded-circle" src="@Url.Content("~/Images/sample.png")" alt="Profile pic" /></div>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col-sm-4">
+                            &nbsp;
+                        </div>
+                        <div class="col-sm-8" style="text-align:center">
+
+                            <span style="text-align:center;font-weight:bold">Your Profile Pic</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col-sm-4">
+                            &nbsp;
+                        </div>
+                        <div class="col-sm-8">
+                            <input type="file" class="form-control" id="">
+                        </div>
+                    </div>
+
+
+                    <div class="form-group row">
+                        <label for="username" class="col-sm-4 col-form-label">Username:</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="username">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="email" class="col-sm-4 col-form-label">Email Address:</label>
+                        <div class="col-sm-8">
+                            <input type="email" class="form-control" id="email">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="password" class="col-sm-4 col-form-label">Password:</label>
+                        <div class="col-sm-8">
+                            <input type="password" class="form-control" id="password">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="confirmpassword" class="col-sm-4 col-form-label">Confirm Password:</label>
+                        <div class="col-sm-8">
+                            <input type="password" class="form-control" id="confirmpassword">
+                        </div>
+                    </div>
+
+
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Sign up</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- end of modal -->
