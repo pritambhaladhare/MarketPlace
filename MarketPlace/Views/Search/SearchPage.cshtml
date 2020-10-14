@@ -1,14 +1,17 @@
-﻿
+﻿@model MarketPlace_DAL.tblProduct
+
 @{
-    ViewBag.Title = "SearchPage";
-    Layout = "~/Views/Shared/_site.cshtml";
+    
+        ViewBag.Title = "SearchPage";
+        Layout = "~/Views/Shared/_site.cshtml";
+    
 }
 
 <div>
 
     <div class="input-group mb-3">
         <div class="input-group-prepend">
-           
+
             <select class="custom-select label-primary" id="slt-category">
                 <option selected>Category</option>
                 <option value="1">Mechanical</option>
@@ -17,10 +20,12 @@
                 <option value="4">Furniture</option>
             </select>
         </div>
-        @Html.TextBox("searching")<input type="text" class="form-control" placeholder="Search..."/>
-        <button style="margin-left:5px" class="btn btn-primary" type="button"><i class="fa fa-search"></i></button>
+        @Html.EditorFor(model => model.ProductName, new { htmlAttributes = new { @class = "form-control txt-prod-search", @placeholder = "Enter product here.." } })
+        <button style="margin-left:5px" id="btn-search-product" class="btn btn-primary" type="button"><i class="fa fa-search"></i></button>
     </div>
 
 
-   
+
 </div>
+
+

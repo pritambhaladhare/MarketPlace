@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MarketPlace.Models
+namespace MarketPlace_DAL
 {
     using System;
     using System.Collections.Generic;

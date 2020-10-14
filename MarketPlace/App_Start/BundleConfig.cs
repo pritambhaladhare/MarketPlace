@@ -8,8 +8,13 @@ namespace MarketPlace
         // For more information on bundling, visit https://go.microsoft.com/fwlink/?LinkId=301862
         public static void RegisterBundles(BundleCollection bundles)
         {
-           /* bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
-                        "~/Scripts/jquery-{version}.js"));*/
+            bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
+                        "~/Scripts/jquery.js"
+                        ));
+
+            bundles.Add(new ScriptBundle("~/bundles/jqueryui").Include(
+                       "~/Scripts/jquery-ui.js"
+                       ));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.validate*"));
@@ -20,11 +25,15 @@ namespace MarketPlace
                         "~/Scripts/modernizr-*"));*/
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-                      "~/Scripts/jquery-3.5.1.slim.min.js",
+          
                       "~/Scripts/popper.min.js",
-                      "~/Scripts/bootstrap4.min.js",
-                      "~/Scripts/custom.js"
+                      "~/Scripts/bootstrap4.min.js"
+             
                       ));
+
+            bundles.Add(new ScriptBundle("~/bundles/custom").Include(
+                   "~/Scripts/custom.js"
+                   ));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap4.css",

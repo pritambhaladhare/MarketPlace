@@ -7,20 +7,25 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MarketPlace.Models
+namespace MarketPlace_DAL
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel;
+    using MarketPlace.Models;
+
+    [MetadataType(typeof(LoginMetaData))]
     public partial class tblUser
     {
-        public int userID { get; set; }
+         public int userID { get; set; }
         public string username { get; set; }
         public string firstname { get; set; }
         public string lastname { get; set; }
         public string email { get; set; }
         public string password { get; set; }
         public Nullable<int> credential_ID { get; set; }
-        public string imagepath { get; set; }
     }
+
+
 }

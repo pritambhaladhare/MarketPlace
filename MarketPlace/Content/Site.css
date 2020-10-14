@@ -51,4 +51,18 @@
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(46,113,133,1) 0%, rgba(0,212,255,1) 36%);
 }
 
+.product-search-background {
+    background: rgb(201,220,232);
+    background: linear-gradient(90deg, rgba(201,220,232,1) 0%, rgba(77,140,179,1) 36%, rgba(0,212,255,1) 100%);
+}
+
 /* Enter Page title here  (name) */
+
+.custom-btn-style {
+    padding: 3px 10px;
+    background: #5BC0DE;
+    font-weight: bold;
+    border: 1px solid #ffffff;
+    border-radius: 0px;
+    color: #fff
+}

@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="MarketPlaceModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="MarketPlaceModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="tblCategory">
           <Key>
             <PropertyRef Name="categoryID" />
@@ -71,7 +71,6 @@
           <Property Name="email" Type="varchar" MaxLength="50" />
           <Property Name="password" Type="varchar" MaxLength="50" />
           <Property Name="credential_ID" Type="int" />
-          <Property Name="imagepath" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityContainer Name="MarketPlaceModelStoreContainer">
           <EntitySet Name="tblCategory" EntityType="Self.tblCategory" Schema="dbo" store:Type="Tables" />
@@ -152,7 +151,6 @@
           <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="credential_ID" Type="Int32" />
-          <Property Name="imagepath" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityContainer Name="MarketPlaceEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="tblCategories" EntityType="Self.tblCategory" />
@@ -238,7 +236,6 @@
                 <ScalarProperty Name="email" ColumnName="email" />
                 <ScalarProperty Name="password" ColumnName="password" />
                 <ScalarProperty Name="credential_ID" ColumnName="credential_ID" />
-                <ScalarProperty Name="imagepath" ColumnName="imagepath" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

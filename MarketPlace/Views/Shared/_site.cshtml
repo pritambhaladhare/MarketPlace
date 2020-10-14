@@ -10,6 +10,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - MarketPlace</title>
     @Styles.Render("~/Content/css")
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+
 
 </head>
 
@@ -18,7 +20,7 @@
 
 <body class="login-background">
 
-  
+
     <div class="container body-content">
 
 
@@ -33,7 +35,7 @@
                 <span>Building Product Selection Platform</span>
             </div>
 
-        @RenderBody()
+            @RenderBody()
 
         </div>
 
@@ -44,10 +46,10 @@
     </div>
 
 
-
-
-
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryui")
     @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/custom")
 
 </body>
 

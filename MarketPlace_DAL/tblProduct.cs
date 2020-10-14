@@ -7,14 +7,15 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MarketPlace.Models
+namespace MarketPlace_DAL
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class tblCategory
+    public partial class tblProduct
     {
-        public int categoryID { get; set; }
-        public string CategoryName { get; set; }
+        public int ProductID { get; set; }
+        public string ProductName { get; set; }
+        public Nullable<int> CategoryID { get; set; }
     }
 }
